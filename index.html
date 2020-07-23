@@ -285,12 +285,16 @@
 			$('html, body').animate({scrollTop: $($.attr(this, 'href')).offset().top}, 500);
 		});
 		
+		var totalLoads = 0;
 		var iframe = document.querySelector("iframe");
-		document.querySelector("iframe").addEventListener( "load", function(e) {
+		iframe.addEventListener( "load", function(e) {
+			totalLoads++;
 			$('html, body').animate({scrollTop: 0}, 500);
-			setTimeout(function () {
-				iframe.height= '500'; 
-			}, 500);
+			if(totalLoads === 2) {
+				setTimeout(function () {
+					iframe.height= '500'; 
+				}, 500);
+			}
 		});
 	</script>
 </body>
