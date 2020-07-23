@@ -1,0 +1,25 @@
+{
+  "name": "mt-landing-page",
+  "version": "1.0.0",
+  "description": "Miguel Tutor landing website",
+  "private": true,
+  "main": "index.html",
+  "scripts": {
+    "build": "node-sass assets/sass/main.scss assets/css/main.css --output-style expanded",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migueltutor/mt-landing-page.git"
+  },
+  "keywords": [],
+  "author": "Miguel Tutor",
+  "license": "CC",
+  "bugs": {
+    "url": "https://github.com/migueltutor/mt-landing-page/issues"
+  },
+  "homepage": "https://github.com/migueltutor/mt-landing-page#readme",
+  "devDependencies": {
+    "node-sass": "~4.14.1"
+  }
+}

@@ -1,1 +1,1 @@
-# mt-landing-page
+# miguel-tutor
