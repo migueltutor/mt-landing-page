@@ -280,19 +280,22 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-		$(document).on('click', 'a[href^="#"]', function (event) {
+		// Smooth scroll to form
+		$(document).on("click", 'a[href^="#"]', function (event) {
 			event.preventDefault();
-			$('html, body').animate({scrollTop: $($.attr(this, 'href')).offset().top}, 500);
+			$("html, body").animate({scrollTop: $($.attr(this, "href")).offset().top}, 500);
 		});
-		
+
+		// Scroll up after form is submitted
+		var formStartTop = $("#form-start").offset().top;
 		var totalLoads = 0;
 		var iframe = document.querySelector("iframe");
-		iframe.addEventListener( "load", function(e) {
+		iframe.addEventListener("load", function(e) {
 			totalLoads++;
-			$('html, body').animate({scrollTop: 0}, 500);
+			$("html, body").animate({scrollTop: formStartTop}, 500);
 			if(totalLoads === 2) {
 				setTimeout(function () {
-					iframe.height= '500'; 
+					iframe.height= "500";
 				}, 500);
 			}
 		});
