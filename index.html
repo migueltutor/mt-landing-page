@@ -292,8 +292,8 @@
 		var iframe = document.querySelector("iframe");
 		iframe.addEventListener("load", function(e) {
 			totalLoads++;
-			$("html, body").animate({scrollTop: formStartTop}, 500);
 			if(totalLoads === 2) {
+				$("html, body").animate({scrollTop: formStartTop}, 500);
 				setTimeout(function () {
 					iframe.height= "500";
 				}, 500);
