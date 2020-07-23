@@ -2818,3 +2818,9 @@ input[type="button"].small,
     padding-right: 2em;
   }
 }
+
+@media screen and (max-width: 1680px) {
+  #button-enviar-consulta {
+    display: none;
+  }
+}
