@@ -20,8 +20,13 @@
 		<span class="logo icon no-icon"></span>
 		<h1>Miguel Tutor</h1>
 		<p>¿Necesitas asesoría para realizar tus trabajos y tutoría para preparar tus exámenes?</p>
+		<br><br>
+		<ul class="actions special">
+			<li><a href="#form-start" class="button">ENVIAR CONSULTA</a></li>
+		</ul>
 	</div>
 
+	<div id="form-start"></div>
 	<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdECPCqJ1Tbx_vXG-7ZC6CaVHG7wFaZpGve503xVdxhgMPmHQ/viewform?embedded=true" width="100%" height="1800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 
 	<!-- Main -->
@@ -270,6 +275,15 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		$(document).on('click', 'a[href^="#"]', function (event) {
+			event.preventDefault();
+
+			$('html, body').animate({
+				scrollTop: $($.attr(this, 'href')).offset().top
+			}, 500);
+		});
+	</script>
 </body>
 
 </html>
